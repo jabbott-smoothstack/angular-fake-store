@@ -1,0 +1,33 @@
+<h1 class = "text-center">Products</h1>
+
+<h4 class = "text-center">Categories: </h4>
+
+<div id = "categoryDiv" class = "d-flex align-items-center justify-content-center">
+    <ul>
+        <li class = "category-select"><a (click) = "fetchItemsFromCategory('all')">All Items</a></li>
+        <li class = "category-select" *ngFor="let item of productCategories"><a (click) = "fetchItemsFromCategory(item)">{{item}}</a></li>
+    </ul>
+</div>
+
+<h4 class = "text-center">Items: </h4>
+
+<div class = "row">
+        <div *ngFor = "let product of filteredProducts" class = "card-group d-flex flex-wrap col-sm-6">
+            <div class="card justify-content-center" style = "width: 18rem; display: inline; background-color: #29335C;">
+                <img class="card-img-top" src={{product.image}} style = "width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">{{product.title}}</h5>
+                <p class="card-text">{{product.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--
+    <ul>
+        <tr *ngFor="let product of filteredProducts">
+            <td>{{product.title}}</td> 
+            <td>{{product.price | currency: 'USD'}}</td>
+        </tr>
+    </ul>
+    -->

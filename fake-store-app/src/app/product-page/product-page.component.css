@@ -1,0 +1,24 @@
+li {
+    display: inline;
+    margin: 3rem;
+}
+
+.category-select {
+    background-color: darkred;
+    color: #eeeeee;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.category-select:hover {
+    background-color: #eeeeee;
+    color: darkred;
+}
+
+#categoryDiv {
+    margin: 1.5rem 1rem 1rem 1rem;
+}
+
+.product-display {
+    display: flex;
+    flex-wrap: wrap;
+}
