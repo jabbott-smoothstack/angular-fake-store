@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductInterface } from '../ProductInterface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-page',
@@ -11,11 +12,13 @@ export class ProductPageComponent implements OnInit {
   productCategories: []
   filteredProducts: ProductInterface[]
   uri: string
+  router: Router
 
-  constructor() { 
+  constructor(router : Router) { 
     this.productCategories = [];
     this.filteredProducts = [];
     this.uri = "";
+    this.router = router;
   }
 
   ngOnInit(): void {

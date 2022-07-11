@@ -13,7 +13,7 @@
 
 <div class = "row">
         <div *ngFor = "let product of filteredProducts" class = "card-group d-flex flex-wrap col-sm-6">
-            <div class="card justify-content-center" style = "width: 18rem; display: inline; background-color: #29335C;">
+            <div class="card justify-content-center" style = "width: 18rem; display: inline; background-color: #29335C;" (click) = "router.navigate(['products/', product.id])">
                 <img class="card-img-top" src={{product.image}} style = "width: 18rem;">
                 <div class="card-body">
                 <h5 class="card-title">{{product.title}}</h5>
